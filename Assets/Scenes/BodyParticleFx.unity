@@ -441,6 +441,8 @@ GameObject:
   m_Component:
   - component: {fileID: 611288331}
   - component: {fileID: 611288330}
+  - component: {fileID: 611288333}
+  - component: {fileID: 611288335}
   m_Layer: 0
   m_Name: Kinect Controller
   m_TagString: Untagged
@@ -519,6 +521,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &611288333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611288329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b976a1901bb5d478901026c07729cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &611288335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611288329}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe02e96c043f4794daa4a9e8a997cf60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIndex: 0
+  gestureInfo: {fileID: 0}
 --- !u!1 &635728813 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6326201374049978983, guid: 376ce95ace1a1624d93a2687dc297fc8, type: 3}
@@ -555,6 +583,108 @@ MonoBehaviour:
   horizontalOffset: 0
   verticalOffset: 0
   forwardOffset: 0
+--- !u!114 &635728823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635728813}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d89274a6485e94da2bec6e73634eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenCamera: {fileID: 963194227}
+  gradientList:
+  - serializedVersion: 2
+    key0: {r: 1, g: 0.58342004, b: 0.009402071, a: 1}
+    key1: {r: 1, g: 0.3667352, b: 0, a: 1}
+    key2: {r: 1, g: 0.090663105, b: 0.020754695, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 30393
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  - serializedVersion: 2
+    key0: {r: 0.9547169, g: 0.15671764, b: 0.8325356, a: 1}
+    key1: {r: 0.19210014, g: 0.16449271, b: 0.5773585, a: 1}
+    key2: {r: 0.18250549, g: 0.18575582, b: 0.5787421, a: 0}
+    key3: {r: 0.035094302, g: 0.51243997, b: 0.5999999, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 32871
+    ctime2: 34867
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 4
+    m_NumAlphaKeys: 2
+  - serializedVersion: 2
+    key0: {r: 0.104752176, g: 0.7584905, b: 0.027191062, a: 1}
+    key1: {r: 0.041222453, g: 1, b: 0, a: 1}
+    key2: {r: 0.46226627, g: 1, b: 0.011401357, a: 0}
+    key3: {r: 0.7653258, g: 1, b: 0.019607842, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 33215
+    ctime2: 52008
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 4
+    m_NumAlphaKeys: 2
+  vfxParticle: {fileID: 93585841}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,7 +960,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6326201374049978983, guid: 376ce95ace1a1624d93a2687dc297fc8, type: 3}
       propertyPath: m_Name
-      value: Y Bot
+      value: Model
       objectReference: {fileID: 0}
     - target: {fileID: 6665606781762670813, guid: 376ce95ace1a1624d93a2687dc297fc8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -883,6 +1013,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6326201374049978983, guid: 376ce95ace1a1624d93a2687dc297fc8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 635728818}
+    - targetCorrespondingSourceObject: {fileID: 6326201374049978983, guid: 376ce95ace1a1624d93a2687dc297fc8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 635728823}
   m_SourcePrefab: {fileID: 100100000, guid: 376ce95ace1a1624d93a2687dc297fc8, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
