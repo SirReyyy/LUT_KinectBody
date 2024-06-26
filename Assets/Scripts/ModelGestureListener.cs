@@ -8,8 +8,8 @@ public class ModelGestureListener : MonoBehaviour, KinectGestures.GestureListene
     [Tooltip("Index of the player, tracked by this component. 0 means the 1st player, 1 - the 2nd one, 2 - the 3rd one, etc.")]
     public int playerIndex = 0;
 
-    [Tooltip("UI-Text to display gesture-listener messages and gesture information.")]
-    public UnityEngine.UI.Text gestureInfo;
+    // [Tooltip("UI-Text to display gesture-listener messages and gesture information.")]
+    // public UnityEngine.UI.Text gestureInfo;
 
     // singleton instance of the class
     private static ModelGestureListener instance = null;
@@ -73,9 +73,11 @@ public class ModelGestureListener : MonoBehaviour, KinectGestures.GestureListene
         manager.DetectGesture(userId, KinectGestures.Gestures.SwipeRight);
         // manager.DetectGesture(userId, KinectGestures.Gestures.SwipeUp);
 
+        /*
         if (gestureInfo != null) {
             gestureInfo.text = "Swipe left, right or up to change the slides.";
         }
+        */
     }
 
 
@@ -84,9 +86,12 @@ public class ModelGestureListener : MonoBehaviour, KinectGestures.GestureListene
         if (userIndex != playerIndex)
             return;
 
+        /*
         if (gestureInfo != null) {
             gestureInfo.text = string.Empty;
         }
+        */
+
     }
 
 
@@ -98,6 +103,7 @@ public class ModelGestureListener : MonoBehaviour, KinectGestures.GestureListene
 
         if ((gesture == KinectGestures.Gestures.ZoomOut || gesture == KinectGestures.Gestures.ZoomIn) && progress > 0.5f)
         {
+            /*
             if (gestureInfo != null)
             {
                 string sGestureText = string.Format("{0} - {1:F0}%", gesture, screenPos.z * 100f);
@@ -106,10 +112,12 @@ public class ModelGestureListener : MonoBehaviour, KinectGestures.GestureListene
                 progressDisplayed = true;
                 progressGestureTime = Time.realtimeSinceStartup;
             }
+            */
         }
         else if ((gesture == KinectGestures.Gestures.Wheel || gesture == KinectGestures.Gestures.LeanLeft ||
                  gesture == KinectGestures.Gestures.LeanRight) && progress > 0.5f)
         {
+            /*
             if (gestureInfo != null)
             {
                 string sGestureText = string.Format("{0} - {1:F0} degrees", gesture, screenPos.z);
@@ -118,9 +126,11 @@ public class ModelGestureListener : MonoBehaviour, KinectGestures.GestureListene
                 progressDisplayed = true;
                 progressGestureTime = Time.realtimeSinceStartup;
             }
+            */
         }
         else if (gesture == KinectGestures.Gestures.Run && progress > 0.5f)
         {
+            /*
             if (gestureInfo != null)
             {
                 string sGestureText = string.Format("{0} - progress: {1:F0}%", gesture, progress * 100);
@@ -129,6 +139,7 @@ public class ModelGestureListener : MonoBehaviour, KinectGestures.GestureListene
                 progressDisplayed = true;
                 progressGestureTime = Time.realtimeSinceStartup;
             }
+            */
         }
     }
 
@@ -138,12 +149,13 @@ public class ModelGestureListener : MonoBehaviour, KinectGestures.GestureListene
         // the gestures are allowed for the primary user only
         if (userIndex != playerIndex)
             return false;
-
+        /*
         if (gestureInfo != null)
         {
             string sGestureText = gesture + " detected";
             gestureInfo.text = sGestureText;
         }
+        */
 
         if (gesture == KinectGestures.Gestures.SwipeLeft)
             swipeLeft = true;
@@ -165,11 +177,12 @@ public class ModelGestureListener : MonoBehaviour, KinectGestures.GestureListene
         if (progressDisplayed)
         {
             progressDisplayed = false;
-
+            /*
             if (gestureInfo != null)
             {
                 gestureInfo.text = String.Empty;
             }
+            */
         }
 
         return true;
@@ -184,7 +197,7 @@ public class ModelGestureListener : MonoBehaviour, KinectGestures.GestureListene
         if (progressDisplayed && ((Time.realtimeSinceStartup - progressGestureTime) > 2f))
         {
             progressDisplayed = false;
-            gestureInfo.text = String.Empty;
+            // gestureInfo.text = String.Empty;
 
             Debug.Log("Forced progress to end.");
         }

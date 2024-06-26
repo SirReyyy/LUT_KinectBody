@@ -14,10 +14,6 @@ public class Vfx : MonoBehaviour
     private ModelGestureListener gestureListener;
     public VisualEffect vfxParticle;
 
-    private int maxGradient = 0;
-    private int gradient = 0;
-
-
 
     void Start()
     {
@@ -26,10 +22,6 @@ public class Vfx : MonoBehaviour
         {
             screenCamera = Camera.main;
         }
-
-        // vfxParticle = GetComponent<VisualEffect>();
-        maxGradient = gradientList.Count;
-        gradient = 0;
 
         // get the gestures listener
         gestureListener = ModelGestureListener.Instance;
