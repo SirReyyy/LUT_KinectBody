@@ -1323,6 +1323,10 @@ PrefabInstance:
       propertyPath: gradientList.Array.data[6].m_NumColorKeys
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 747829371118275239, guid: 376ce95ace1a1624d93a2687dc297fc8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6326201374049978983, guid: 376ce95ace1a1624d93a2687dc297fc8, type: 3}
       propertyPath: m_Name
       value: Model
